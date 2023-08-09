@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### Clone this to your device using-  git clone <url>
+
+In the Root directory you will find package.json
+
+To Install all the dependency
+
+ ### run- yarn install
+
 In the project directory, you can run:
 
 ### `yarn start`
@@ -11,8 +19,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+
 
 
 
