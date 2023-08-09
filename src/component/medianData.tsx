@@ -6,7 +6,7 @@ const MedianData = (a:number, b: keyof WineData) => {
 
     const[median, setMedian]= useState<number[]>([]);
     useEffect(()=>{
-        console.log(anything(a,b))
+        // console.log(anything(a,b))
         setMedian(anything(a,b));
     },[])
 
