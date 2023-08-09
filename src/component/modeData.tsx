@@ -6,7 +6,7 @@ const ModeData = (a:number, b: keyof WineData) => {
 
     const[mode, setMode]= useState<number[]>([]);
     useEffect(()=>{
-        console.log(anything(a,b))
+        // console.log(anything(a,b))
         setMode(anything(a,b));
     },[])
 
