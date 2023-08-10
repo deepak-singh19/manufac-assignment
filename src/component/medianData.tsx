@@ -18,11 +18,7 @@ const MedianData = (a:number, b: keyof WineData) => {
         const mid = Math.floor(median.length / 2)
         
         if(x%2==0){
-            let even=x/2;
-            let odd=(x/2)+1;
-            // console.log(even);
-            // console.log(median[even])
-            med=(median[even]+median[odd])/2
+            med=(median[mid - 1] + median[mid]) / 2
             return med.toFixed(3);
         }else{  
             med=median[mid]
