@@ -37,58 +37,59 @@ const GammaCal = () => {
 
   const gammaModeData = (c: number) => {
     const data: number[] = classWiseGammaVal(c);
-    data.sort(function (a: number, b: number) {
-      return a - b;
-    });
-    // console.log(mode);
-    let hashMap = new Map<number, number>();
-    for (let i = 0; i < data.length; i++) {
-      if (hashMap.has(data[i])) {
-        hashMap.set(data[i], hashMap.get(data[i])! + 1);
-      } else {
-        hashMap.set(data[i], 1);
-      }
-    }
+    const mode:number[]=[];
 
-    let maxCount = 0;
+    data.map((e)=>{
+      mode.push(Number(e.toFixed(3)))
+    })
+
+    mode.sort(function(a:number, b:number){return a - b});
+        // console.log(mode);
+        let hashMap= new Map<number, number>();
+        for(let i=0; i<mode.length; i++){
+            if (hashMap.has(mode[i])){
+                hashMap.set(mode[i], hashMap.get(mode[i])! + 1);
+            }else{
+                hashMap.set(mode[i],1);
+            }
+        }
+
+        let maxCount = 0;
     let result = -1;
 
     hashMap.forEach((value, key) => {
-      if (maxCount < value) {
-        result = key;
-        maxCount = value;
-      }
+        if (maxCount < value) {
+            result = key;
+            maxCount = value;
+        }
     });
+    console.log(hashMap)
 
     return result.toFixed(3);
-  };
+  }
 
-  const gammaMedianData=(c:number)=>{
+  const gammaMedianData = (c: number) => {
     const median: number[] = classWiseGammaVal(c);
-    median.sort(function(a:number, b:number){return a - b});
-        // console.log(median);
-        const x=median.length;
-        let med=0;
-        
-        if(x%2==0){
-            // console.log(x);
-            let even=x/2;
+    median.sort(function (a: number, b: number) {
+      return a - b;
+    });
+    const x = median.length;
+
+    let med = 0;
+    const mid = Math.floor(median.length / 2);
+
+    if (x % 2 == 0) {
+      let even=x/2;
             let odd=(x/2)+1;
             // console.log(even);
             // console.log(median[even])
             med=(median[even]+median[odd])/2
             return med.toFixed(3);
-
-        }else{
-            // console.log(x);
-            let odd=(x+1)/2;
-            // console.log(odd);
-            med=(median[odd])/2
-            return med.toFixed(3) ;
-            
-        }
-
-  }
+    } else {
+      med = median[mid];
+      return med.toFixed(3);
+    }
+  };
 
   return (
     <div className="center">
@@ -120,7 +121,6 @@ const GammaCal = () => {
               <td key={e}>{gammaModeData(e)}</td>
             ))}
           </tr>
-          
         </tbody>
       </table>
     </div>

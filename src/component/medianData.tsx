@@ -12,26 +12,21 @@ const MedianData = (a:number, b: keyof WineData) => {
 
     const medianData=()=>{
         median.sort(function(a:number, b:number){return a - b});
-        // console.log(median);
         const x=median.length;
+        
         let med=0;
+        const mid = Math.floor(median.length / 2)
         
         if(x%2==0){
-            // console.log(x);
             let even=x/2;
             let odd=(x/2)+1;
             // console.log(even);
             // console.log(median[even])
             med=(median[even]+median[odd])/2
             return med.toFixed(3);
-
-        }else{
-            // console.log(x);
-            let odd=(x+1)/2;
-            // console.log(odd);
-            med=(median[odd])/2
-            return med.toFixed(3) ;
-            
+        }else{  
+            med=median[mid]
+            return med.toFixed(3) ;     
         }
     }
   return (
