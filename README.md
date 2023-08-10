@@ -25,10 +25,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 FOR Flavanoids Data
-<img width="1440" alt="Screenshot 2023-08-09 at 3 45 41 PM" src="https://github.com/deepak-singh19/manufac-assignment/assets/48211820/3be4ae71-549b-4fd1-b458-09277c0d0856">
+<img width="1440" alt="Screenshot 2023-08-10 at 1 01 44 PM" src="https://github.com/deepak-singh19/manufac-assignment/assets/48211820/e413ee38-b710-4ddd-bbb3-c46723d65190">
+
 
 FOR Gamma Data
-<img width="1440" alt="Screenshot 2023-08-09 at 3 46 02 PM" src="https://github.com/deepak-singh19/manufac-assignment/assets/48211820/82e065cf-e296-4e35-9df3-d315aa52da7f">
+<img width="1440" alt="Screenshot 2023-08-10 at 1 01 53 PM" src="https://github.com/deepak-singh19/manufac-assignment/assets/48211820/702bfe60-2c66-46e6-9ed0-e0fb4976749f">
+
 
 
 
